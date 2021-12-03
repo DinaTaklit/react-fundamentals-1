@@ -11,7 +11,7 @@
   -->
   <script src="https://unpkg.com/react@17.0.0/umd/react.development.js"></script>
   <script src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.development.js"></script>
-  
+
   <script type="module">
     
     // You're going to re-implement this code using React!
@@ -27,9 +27,17 @@
     // 💰 The example in the markdown file should be a good hint for you.
 
     const rootElement = document.querySelector('#root')
+    const span_hello = React.createElement('span', {
+      children: 'Hello',
+    })
+
+    const span_world = React.createElement('span', {
+      children: ' World!'
+    })
+
     const elementProps = {
       className: 'container',
-      children: 'Hello Dina!'
+      children: [span_hello, span_world]
     }
     const elementType = 'div'
 
