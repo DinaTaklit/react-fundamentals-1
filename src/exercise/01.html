@@ -30,10 +30,16 @@
 
     </div>
     <script type="module">
+        const root = document.createElement('div')
+        // another option is 
+        // rootElement.setAttribute('id', 'root')
+        root.id = 'root'
         const div = document.createElement('div')
         div.className = "container"
         div.textContent = "Hello World"
-        document.querySelector('#root').append(div)
+        root.append(div)
+        document.querySelector('body').append(root)
+        // document.querySelector('#root').append(div)
     </script>
 </body>
 </html>
